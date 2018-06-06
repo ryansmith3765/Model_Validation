@@ -24,5 +24,20 @@ namespace Model_Validation
         {
             InitializeComponent();
         }
+
+        private void patLoad_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Course_cmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void getScan_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

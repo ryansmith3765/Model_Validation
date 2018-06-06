@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Model_Validation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Compare Beam Data" Height="600" Width="800">
     <Grid>
+        <TextBlock Text="Calculated Verification Data" Margin="10,10,0,0" FontSize="24" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="Patient ID:" Margin="10,40,0,0" FontSize="18" FontWeight="Bold"></TextBlock>
+        <TextBox Name="patient_txt" Width="150" Height="30" Margin="120,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" ></TextBox>
+        <Button Name="patLoad_btn" Width="150" Height="30" Margin="300,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="patLoad_btn_Click" Content="Load Patient"></Button>
+        <TextBlock Text="Course:" Margin="10,80,0,0" FontSize="18" FontWeight="Bold" ></TextBlock>
+        <ComboBox Name="course_cmb" Margin="120,80,0,0" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="Course_cmb_SelectionChanged"></ComboBox>
+        <TextBlock Text="Plan:" Margin="300,80,0,0" FontSize="18" FontWeight="Bold" ></TextBlock>
+        <ComboBox Name="plan_cmb" Margin="410,80,0,0" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="Course_cmb_SelectionChanged"></ComboBox>
+
+        <TextBlock Text="Measured Scans" Margin="10,120,0,0" FontSize="18" FontWeight="Bold" ></TextBlock>
+        <Button Name="getScan_btn" Width="150" Height="30" Margin="10,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="getScan_btn_Click" Content="Find W2CAD Scans"></Button>
+        <Border BorderBrush="Black" BorderThickness="3" Height="200" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,150,0,0">
+
+        <ScrollViewer Margin="0,0,0,0">
+            <StackPanel Name="prevScans_sp" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"></StackPanel> 
+            
+        </ScrollViewer>
+        </Border>
         
     </Grid>
 </Window>
